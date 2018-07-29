@@ -41,5 +41,5 @@ FakeBulbAccessory.prototype.getServices = function() {
         .setCharacteristic(Characteristic.Model, "0")
         .setCharacteristic(Characteristic.SerialNumber, "0000");
     
-    return [lightbulbService];
+    return [lightbulbService, informationService];
 }
