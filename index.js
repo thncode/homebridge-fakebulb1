@@ -38,12 +38,12 @@ FakeBulbAccessory.prototype.getServices = function() {
     return [lightbulbService];
 }
 
-getServices: function() {
+//getServices: function() {
 
-    var informationService = new Service.AccessoryInformation();
+//    var informationService = new Service.AccessoryInformation();
 
-    informationService
-        .setCharacteristic(Characteristic.Manufacturer, "Fake Bulb")
-        .setCharacteristic(Characteristic.Model, "0")
-        .setCharacteristic(Characteristic.SerialNumber, "0000");
-}
+//    informationService
+//        .setCharacteristic(Characteristic.Manufacturer, "Fake Bulb")
+//        .setCharacteristic(Characteristic.Model, "0")
+//        .setCharacteristic(Characteristic.SerialNumber, "0000");
+//}
