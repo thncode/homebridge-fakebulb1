@@ -29,21 +29,17 @@ FakeBulbAccessory.prototype.setPowerOn = function(powerOn, callback) {
 
 FakeBulbAccessory.prototype.getServices = function() {
     var lightbulbService = new Service.Lightbulb(this.name);
+    var informationService = new Service.AccessoryInformation();
     
     lightbulbService
       .getCharacteristic(Characteristic.On)
       .on('get', this.getPowerOn.bind(this))
       .on('set', this.setPowerOn.bind(this));
-    
-    return [lightbulbService];
-}
-
-getServices: function() {
-
-    var informationService = new Service.AccessoryInformation();
 
     informationService
         .setCharacteristic(Characteristic.Manufacturer, "Fake Bulb")
         .setCharacteristic(Characteristic.Model, "0")
         .setCharacteristic(Characteristic.SerialNumber, "0000");
+    
+    return [lightbulbService];
 }
